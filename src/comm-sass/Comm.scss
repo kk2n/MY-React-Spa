@@ -1,0 +1,99 @@
+@import "./short-sass/sscss-set";
+@import "./short-sass/sscss-mixin";
+@import "./reset.scss";
+$fz:16px;
+html{
+    font-size: $fz;
+}
+.anim1 {
+    transition: All 0.1s ease-in-out;
+    -webkit-transition: All 0.1s ease-in-out;
+    -moz-transition: All 0.1s ease-in-out;
+    -o-transition: All 0.1s ease-in-out;
+}
+.anim3 {
+    transition: All 0.3s ease-in-out;
+    -webkit-transition: All 0.3s ease-in-out;
+    -moz-transition: All 0.3s ease-in-out;
+    -o-transition: All 0.3s ease-in-out;
+}
+a{
+    @include ss(() (td)(c #333));
+    &:hover{
+      @include ss(() (c #333));
+    }
+    &:focus{
+        @include ss(() (c #333));
+      }
+}
+div{
+    box-sizing:border-box
+}
+.fanhui-ico {
+    @include ss((ml -0.8125rem)());
+}
+.am-list-header {
+    padding-bottom: 0.9375rem;
+    color: #666666;
+}
+.am-list-item .am-list-line .am-list-brief{
+    color: #999999;
+}
+.am-navbar {
+    @include ss((w 100%) (lhh 3.125rem)(bgc #21292c)(c #fff)(fz 1rem)(pof)(t)(z 10));
+}
+.am-tabs-default-bar-tab {
+    @include ss(() (h 3.125rem));
+}
+.am-navbar-light .am-navbar-title {
+    @include ss(() (c #fff)(fz 1.1875rem));
+}
+.am-navbar-left-icon a {
+    @include ss(() (c #fff));
+}
+.am-list-item .am-list-line-multiple {
+    @include ss(() (pt 0.9375rem)(pb 0.9375rem));
+}
+.am-list-item img{
+    @include ss(() (wh 46 46));
+}
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+div.am-list-header{
+    @include ss((fz 1rem) (p 0.75rem 0.9375rem));
+}
+.my-com{
+    margin-top: 50px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    html:not([data-scale]) .am-list-body::before {
+        height: 0;
+    }
+    html:not([data-scale]) .am-list-body::after {
+        height: 0;
+    }
+    html:not([data-scale]) div.jiange {
+        @include ss((h 0.0625rem) (por));
+        &::after {
+            position: absolute;
+            background-color: #ddd;
+            display: block;
+            z-index: 1;
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 0;
+            width: 100%;
+            height: 0.0625rem;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
+    }
+}
+.imgb{
+    @include ss(() (w 100%));
+}
